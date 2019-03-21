@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/authors', {useNewUrlParser:true})
+mongoose.connect('mongodb://localhost/authors1', {useNewUrlParser:true})
   .catch(err => console.log(err));
 
 const AuthorSchema = new mongoose.Schema({
-    Name: {
+    name: {
       type: String, 
       default: ""
     },

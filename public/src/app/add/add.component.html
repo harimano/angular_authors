@@ -8,12 +8,12 @@
     <form >
       <div class="">
         <label for="" >Name</label><br>
-        <input type="text" class=""  value="">
+        <input type="text" name="newAuthor.name" [(ngModel)]='newAuthor.name'>
       </div>
       <br>
       <button [routerLink]="['']" class="btn btn-primary mb-2">Cancel</button>
       &nbsp;
-      <button type="submit" class="btn btn-primary mb-2">Submit</button>
+      <button (click)="onSubmit()" class="btn btn-primary mb-2">Submit</button>
     </form>
   </div>
 

@@ -8,14 +8,15 @@ import { HttpService } from './http.service';
 })
 export class AppComponent {
   title = 'public';
+  allAuthors:any;
 
   constructor(private _httpService: HttpService ){}
 
 
-
-
   ngOnInit() {
-
+    this._httpService.getAllAuthors()
+      .subscribe(data => this.allAuthors =data);
   }
+
 
 }

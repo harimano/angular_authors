@@ -17,7 +17,7 @@ module.exports = {
 
   createAuthor: (req, res) => {
     const DATA = req.body;
-    console.log("hari", DATA);
+    console.log("server", DATA);
     Author.create(DATA)
       .then(data => res.json(data))
       .catch(err => res.json(err));
