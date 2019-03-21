@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class HttpService {
-
+  editAuthorid:String;
   constructor(private _http: HttpClient) { }
 
 
@@ -23,6 +23,9 @@ updateAuthor(data:any,id:string){
 
 deleteAuthor(id){
   return this._http.delete('/api/authors/'+id)
+}
+getAuthor(id){
+  return this._http.get('/api/authors/'+id)
 }
 
 }

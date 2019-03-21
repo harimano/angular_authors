@@ -5,7 +5,10 @@ mongoose.connect('mongodb://localhost/authors1', {useNewUrlParser:true})
 const AuthorSchema = new mongoose.Schema({
     name: {
       type: String, 
-      default: ""
+      default: "",
+      required:[true,"Author Name is required"],
+      minlength:[5,'must be more than 5 characters']
+      
     },
 }, {timestamps:true});
 
