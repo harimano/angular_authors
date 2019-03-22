@@ -8,8 +8,11 @@ const AuthorSchema = new mongoose.Schema({
       default: "",
       required:[true,"Author Name is required"],
       minlength:[5,'must be more than 5 characters']
-      
     },
+    quotes:[{
+      content:{type:String,required:[true,"required"]},
+      vote:{type:Number}
+    }]
 }, {timestamps:true});
 
 module.exports = mongoose.model('Author', AuthorSchema); 

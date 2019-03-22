@@ -1,0 +1,20 @@
+<div class="content">
+  <a  [routerLink]="['quotes']" >Add a quote</a>
+    <h6>Quotes by Placeholder:</h6> 
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Quote</th> 
+          <th scope="col">Votes</th>
+          <th scope="col">Actions Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor= "let quote of allQuotes; let i = index">
+          <td>{{quote.content}} </td>
+          <td>{{quote.vote}}</td>
+          <td><button (click)="onVoteUp(i, quote._id)" >Vote Up</button> &nbsp;<button (click)="onVoteDown(i)" >Vote Down</button> &nbsp; <button (click)="deleteQuote(i)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>

@@ -21,11 +21,21 @@ updateAuthor(data:any,id:string){
   return this._http.put('/api/authors/'+id,data)
 }
 
+updateAuthorQuote(id:string, quote_id: string, data:any, ){
+  return this._http.put(`/api/authors/qoute/${id}/${quote_id}`,data)
+}
+
 deleteAuthor(id){
   return this._http.delete('/api/authors/'+id)
 }
 getAuthor(id){
   return this._http.get('/api/authors/'+id)
 }
+
+addQuote(addquote:any){
+  return this._http.post('api/quotes',addquote)
+}
+
+
 
 }

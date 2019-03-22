@@ -1,0 +1,20 @@
+<div class="content">
+    <a [routerLink]="['']">Home</a>
+    <br>
+    <br>
+    <h6>Provide a new Quote for placeholder:</h6>
+          
+    <div class="border">
+      <form >
+        {{addquote|json}}
+        <div class="">
+          <label for="" >Quote</label><br>
+          <input type="text" name="addquote.content" [(ngModel)]='addquote.content'>
+        </div>
+        <br>
+        <button [routerLink]="['']" class="btn btn-primary mb-2">Cancel</button>
+        &nbsp;
+        <button (click)="onSubmit3()" class="btn btn-primary mb-2">Submit</button>
+      </form>
+    </div>
+    
